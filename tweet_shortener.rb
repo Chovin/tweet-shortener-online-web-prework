@@ -16,7 +16,7 @@ end
 def word_substituter tweet
   tweet.
     split.
-    map {|word| dictionary[word] if dictionary.keys.include? word}.
+    map {|word|  dictionary.keys.include? word ? dictionary[word] : word}.
     join " "
 end
 
