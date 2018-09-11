@@ -14,8 +14,10 @@ def dictionary
 end
 
 def word_substituter tweet
-  dictionary.each {|k, v| tweet[k] &&= v}
-  tweet
+  tweet.
+    split.
+    map {|word| dictionary[word] if dictionary.keys.include? word}.
+    join " "
 end
 
 def bulk_tweet_shortener tweets
