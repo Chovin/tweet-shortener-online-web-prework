@@ -13,10 +13,11 @@ def dictionary
   }
 end
 
-def word_substituter tweet 
-
+def word_substituter tweet
+  dictionary.each {|k, v| tweet[k] &&= v}
+  tweet
 end
 
-def bulk_tweet_shortener tweet 
+def bulk_tweet_shortener tweets
 
 end
