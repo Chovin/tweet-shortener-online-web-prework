@@ -24,8 +24,8 @@ def bulk_tweet_shortener tweets
   tweets.each {|tweet| puts word_substituter tweet}
 end
 
-def selective_tweet_shortener
-
+def selective_tweet_shortener tweet
+  tweet.size > 140 ? word_substituter(tweet) : tweet
 end
 
 def shortened_tweet_truncator
